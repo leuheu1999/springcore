@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id = "sampleDao" class = "com.fis.spring.dao.SampleDaoImpl">
+        <property name="message" value="Hello World!"/>
+    </bean>
+    <bean id="sampleService" class="com.fis.spring.service.SampleServiceImpl">
+        <constructor-arg ref="sampleDao" />
+<!--        <property name="sampleDao" ref="sampleDao" />-->
+    </bean>
+</beans>
